@@ -1,3 +1,4 @@
+Note, this is the official clever_card_kit severely modified for my use, taking from other repositories on github.com. Most of this is NOT original code.
 # clever_card_kit
 This is where you will find the source code for the Python programs used in the [MonkMakes Clever Card Kit for Raspberry Pi] (https://monkmakes.com/cck)
 
