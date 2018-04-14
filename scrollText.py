@@ -26,10 +26,10 @@ class ScrollText(object):
         self.position = 0
         self.font = pygame.font.SysFont("mono", self.size, bold=True)
         self.text_surface = self.font.render(self.text, True, self.color)
-	def retVals():
-		totWidth = self.font.size(self.text)
-		mWidth = self.font.size(self.memelordpi)
-		return (mWidth, totWidth)
+    def retVals(self):
+        totWidth = self.font.size(self.text)
+        mWidth = self.font.size(self.memelordpi)
+        return (mWidth, totWidth)
     def update(self, hpos=None):
         """update every frame"""
         if hpos is not None:

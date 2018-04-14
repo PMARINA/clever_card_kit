@@ -3,7 +3,7 @@ import SimpleMFRC522
 import pygame
 import math
 import time
-from ScrollText import ScrollText
+from scrollText import ScrollText
 pygame.init()
 reader = SimpleMFRC522.SimpleMFRC522()
 BLACK = (0,0,0)
@@ -22,14 +22,15 @@ def display(s):
 	pygame.display.update()
 def displayer(s):
 	fps = 50
-	surface = pygame.display.set_mode((600,600),pygame.FULLSCREEN)
+	surface = pygame.display.set_mode((600,600))#,pygame.FULLSCREEN)
 	pygame.init()
 	spheres = (
 		ScrollText(surface, s, 400, pygame.Color(255,255,0)),
                 )
 	mWidth, totWidth = spheres[0].retVals()
 	clock = pygame.time.Clock()
-	buff = math.ciel(math.ciel(totWidth/surface.get_width())/fps)
+	print(totWidth)
+	buff = math.ceil(math.ceil(totWidth/surface.get_width())/fps)
 	t = time.time()
 	while time.time()>t+buff:
 		clock.tick(fps)
